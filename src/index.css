@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "@xyflow/react/dist/style.css";
+
+/* ─── Base Resets ─────────────────────────────────────────────────────────────── */
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Inter, Roboto, 'Segoe UI', system-ui, sans-serif;
+  background-color: #020617; /* slate-950 */
+}
+
+/* ─── React Flow overrides for dark theme ─────────────────────────────────────── */
+
+.react-flow__pane {
+  background-color: #0f172a !important; /* slate-900 */
+}
+
+/* Edge interaction targets */
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #a5b4fc !important; /* indigo-300 */
+  stroke-width: 3;
+}
+
+/* Controls panel override */
+.react-flow__controls {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-flow__controls-button {
+  background: #1e293b !important; /* slate-800 */
+  border: 1px solid #334155 !important; /* slate-700 */
+  color: #94a3b8 !important; /* slate-400 */
+  border-radius: 8px !important;
+  width: 32px !important;
+  height: 32px !important;
+  margin: 2px 0 !important;
+  transition: all 0.15s ease;
+}
+
+.react-flow__controls-button:hover {
+  background: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.react-flow__controls-button svg {
+  fill: currentColor !important;
+}
+
+/* Selection box */
+.react-flow__selection {
+  border: 1px solid #6366f1 !important;
+  background: rgba(99, 102, 241, 0.08) !important;
+}
+
+/* Handle hover */
+.react-flow__handle:hover {
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Smooth transitions for panels */
+aside {
+  transition: width 0.2s ease;
+}
